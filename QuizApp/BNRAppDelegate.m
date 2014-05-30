@@ -1,12 +1,18 @@
 //
 //  BNRAppDelegate.m
-//  QuizApp
+//  Quiz
 //
-//  Created by shruti gupta on 30/05/14.
+//  Created by shruti gupta on 27/05/14.
 //  Copyright (c) 2014 Shruti Gupta. All rights reserved.
 //
 
 #import "BNRAppDelegate.h"
+#import "BNRQuizAppViewController.h"
+
+
+
+
+
 
 @implementation BNRAppDelegate
 
@@ -14,6 +20,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    BNRQuizAppViewController *quizVC = [[BNRQuizAppViewController alloc] init];
+    self.window.rootViewController = quizVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -27,7 +35,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
